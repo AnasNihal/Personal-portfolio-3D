@@ -34,7 +34,7 @@ html, body, #root {
 
 .bento-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -42,5 +42,34 @@ html, body, #root {
 
 .bento-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Custom animation utilities for Enerblock aesthetic */
+.clip-path-reveal {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.clip-path-reveal.is-inview {
+  clip-path: inset(0% 0 0 0);
+}
+
+.underline-slide {
+  position: relative;
+  text-decoration: none;
+}
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+.underline-slide:hover::after {
+  width: 100%;
+}
+.underline-slide-accent:hover::after {
+  background-color: #FF5949;
 }

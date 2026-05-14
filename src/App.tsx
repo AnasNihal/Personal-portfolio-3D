@@ -3,10 +3,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
-import Services from './pages/Services'
+import Blog from './pages/Blog'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import Preloader from './components/Preloader'
+import CustomCursor from './components/CustomCursor'
+import Footer from './components/Footer'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -44,11 +46,13 @@ function App() {
         >
           <Home />
           <Work />
-          <Services />
+          <Blog />
           <About />
           <Contact />
+          <Footer />
         </motion.div>
       </div>
+      <CustomCursor />
     </>
   )
 }

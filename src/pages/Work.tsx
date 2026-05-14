@@ -1,144 +1,127 @@
 import React from 'react'
-import FadeIn from '../components/FadeIn'
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 
-const projects = [
+const services = [
   {
-    title: "Digital Launch",
-    category: "Web & App",
     number: "01",
-    color: "bg-[#8A2BE2]", // Purple
-    span: "col-span-1 md:col-span-2 row-span-2",
+    title: "NOTHING PHONE (3) CONCEPT",
+    description: "A high-fidelity scrollytelling concept utilizing Canvas and Framer Motion for deep architectural visualization.",
+    image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop"
   },
   {
-    title: "Brand Campaign",
-    category: "Advertising",
     number: "02",
-    color: "bg-[#FF4500]", // Orange/Red
-    span: "col-span-1",
+    title: "AI-POWERED PORTFOLIO",
+    description: "A dark, brutalist web experience showcasing structural editorial design and smooth micro-interactions.",
+    image: "https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop"
   },
   {
-    title: "Annual Gala",
-    category: "Events",
     number: "03",
-    color: "bg-[#00FA9A]", // Medium Spring Green
-    span: "col-span-1",
-    textDark: true,
+    title: "ECO-CONNECT REALTIME",
+    description: "A real-time communication platform built on WebSocket architecture, engineered for latency-free data flow.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2026&auto=format&fit=crop"
   },
   {
-    title: "Media Strategy",
-    category: "Consulting",
     number: "04",
-    color: "bg-[#1E90FF]", // Dodger Blue
-    span: "col-span-1 md:col-span-2",
+    title: "MATION SAAS PLATFORM",
+    description: "An Instagram DM Automation SaaS featuring a complex, node-based automation builder and robust backend integration.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
   }
 ]
 
-// Geometric SVGs
-const Star = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-  </svg>
-)
-
-const Bolt = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" />
-  </svg>
-)
-
 export default function Work() {
   return (
-    <div id="work" className="bg-[#0C0C0C] bg-grid-pattern min-h-screen relative z-20 pt-32 pb-40 px-6 md:px-10 overflow-hidden border-t border-[#D7E2EA]/10">
-      <div className="max-w-7xl mx-auto flex flex-col relative w-full">
+    <div id="work" className="bg-white w-full min-h-screen py-32 px-6 md:px-10 font-['Kanit'] relative z-20 transition-colors duration-500">
+      <div className="max-w-[1440px] mx-auto w-full">
         
-        {/* Massive Header */}
-        <FadeIn y={40} className="mb-16 flex flex-col">
-          <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
-            SELECTED
-          </h1>
-          <div className="flex items-center gap-4 md:gap-10">
-            <motion.div 
-              className="bg-[#FFD700] text-[#0C0C0C] rounded-full w-16 h-16 md:w-32 md:h-32 flex items-center justify-center shrink-0"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="w-8 h-8 md:w-16 md:h-16">
-                <Star />
-              </div>
-            </motion.div>
-            <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
-              WORK
-            </h1>
-          </div>
-        </FadeIn>
-
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 w-full auto-rows-[250px]">
-          
-          {/* Main featured block */}
-          <FadeIn delay={0.1} y={30} className="col-span-1 md:col-span-2 row-span-2 bento-card bg-[#1a1a1a] p-8 flex flex-col justify-between group">
-            <div className="flex justify-between items-start">
-              <div className="bg-[#D7E2EA] text-[#0C0C0C] text-sm font-bold uppercase px-4 py-2 rounded-full">
-                Featured
-              </div>
-              <div className="w-12 h-12 text-[#FFD700]">
-                <Star />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-5xl font-black text-white uppercase tracking-tight mb-2">Digital Launch</h3>
-              <p className="text-[#D7E2EA]/60 text-xl font-light">Web & App</p>
-            </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#8A2BE2]/20 blur-[50px] rounded-full mix-blend-screen pointer-events-none" />
-          </FadeIn>
-
-          {/* Abstract Shape Block 1 */}
-          <FadeIn delay={0.2} y={30} className="bento-card bg-[#FF4500] p-8 flex items-center justify-center text-[#0C0C0C] relative overflow-hidden group">
-            <motion.div 
-              className="w-32 h-32"
-              whileHover={{ scale: 1.1, rotate: 15 }}
-            >
-              <Bolt />
-            </motion.div>
-          </FadeIn>
-
-          {/* Project Block */}
-          <FadeIn delay={0.3} y={30} className="bento-card bg-[#1a1a1a] p-8 flex flex-col justify-between group">
-            <h3 className="text-3xl font-black text-white uppercase tracking-tight">Brand Campaign</h3>
-            <div className="flex justify-between items-end">
-              <span className="text-[#D7E2EA]/60">Advertising</span>
-              <span className="text-4xl font-black text-[#D7E2EA]/20">02</span>
-            </div>
-          </FadeIn>
-
-          {/* Project Block with light background */}
-          <FadeIn delay={0.4} y={30} className="bento-card bg-[#00FA9A] p-8 flex flex-col justify-between text-[#0C0C0C] group">
-            <h3 className="text-3xl font-black uppercase tracking-tight">Annual Gala</h3>
-            <div className="flex justify-between items-end">
-              <span className="opacity-80 font-medium">Events</span>
-              <span className="text-4xl font-black opacity-20">03</span>
-            </div>
-          </FadeIn>
-
-          {/* Abstract Shape Block 2 */}
-          <FadeIn delay={0.5} y={30} className="col-span-1 md:col-span-2 bento-card bg-[#1E90FF] p-8 flex items-center justify-center relative overflow-hidden group text-[#0C0C0C]">
-             <div className="absolute inset-0 bg-[#0C0C0C]/10 pattern-dots" />
-             <div className="relative z-10 text-center">
-               <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">Creative<br/>Studio</h3>
-             </div>
-          </FadeIn>
-
-          {/* Project Block */}
-          <FadeIn delay={0.6} y={30} className="bento-card bg-[#1a1a1a] p-8 flex flex-col justify-between group">
-            <h3 className="text-3xl font-black text-white uppercase tracking-tight">Media Strategy</h3>
-            <div className="flex justify-between items-end">
-              <span className="text-[#D7E2EA]/60">Consulting</span>
-              <span className="text-4xl font-black text-[#D7E2EA]/20">04</span>
-            </div>
-          </FadeIn>
-
+        {/* Section Header */}
+        <div className="mb-24 flex flex-col items-start w-full">
+          <span className="font-mono text-[#FF5949] text-[11px] tracking-[0.2em] uppercase mb-8">
+            [ PROJECTS ]
+          </span>
+          <motion.h2 
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-black text-[clamp(2.5rem,5vw,4.5rem)] font-bold uppercase leading-[1.1] tracking-wide"
+          >
+            STRUCTURAL CODE <br />
+            BUILT FOR SCALE
+          </motion.h2>
         </div>
+
+        {/* Services List */}
+        <div className="flex flex-col w-full">
+          {services.map((service, index) => (
+            <motion.div 
+              key={service.number}
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="w-full relative group flex flex-col hover:bg-[#0A0A0A] transition-colors duration-500"
+            >
+              {/* Top border line slide in */}
+              <motion.div 
+                className="absolute top-0 left-0 h-[1px] bg-black/10 group-hover:bg-white/10 transition-colors duration-500"
+                initial={{ width: "0%" }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.2 + (index * 0.1), ease: "easeInOut" }}
+              />
+
+              <div className="flex flex-col md:flex-row w-full py-12 md:py-16 px-4 md:px-8 items-start md:items-center">
+                
+                {/* Left Column (30%): Number & Title */}
+                <div className="w-full md:w-[30%] flex flex-col mb-8 md:mb-0">
+                  <span className="font-mono text-[64px] text-black opacity-10 group-hover:opacity-100 group-hover:text-[#FF5949] leading-none mb-4 block transition-all duration-500">
+                    {service.number}
+                  </span>
+                  <h3 className="text-black group-hover:text-white text-[20px] font-bold uppercase tracking-wider transition-colors duration-500">
+                    {service.title}
+                  </h3>
+                </div>
+
+                {/* Center Column (40%): Description & Link */}
+                <div className="w-full md:w-[40%] flex flex-col pr-8 md:pr-16 mb-8 md:mb-0">
+                  <p className="text-[#555555] group-hover:text-[#888888] text-[14px] font-light leading-[1.8] mb-6 max-w-sm transition-colors duration-500">
+                    {service.description}
+                  </p>
+                  <a href="#" className="text-black group-hover:text-[#FF5949] text-[13px] font-light underline-slide w-fit uppercase tracking-widest flex items-center gap-2 transition-colors group/link duration-500">
+                    View project <span className="transform group-hover/link:translate-x-1 transition-transform">→</span>
+                  </a>
+                </div>
+
+                {/* Right Column (30%): Image */}
+                <div className="w-full md:w-[30%] h-[300px] md:h-[400px] overflow-hidden relative">
+                  <motion.img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full border border-[#FF5949] flex items-center justify-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <ArrowUpRight className="text-[#FF5949] w-8 h-8" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
+          
+          {/* Final Bottom Border */}
+          <motion.div 
+            className="w-full h-[1px] bg-black/10 mt-0"
+            initial={{ width: "0%" }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
+          />
+        </div>
+
       </div>
     </div>
   )
