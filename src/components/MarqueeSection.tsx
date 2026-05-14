@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const imagesRow1 = [
   'hero-space-voyage-preview-eECLH3Yc.gif',

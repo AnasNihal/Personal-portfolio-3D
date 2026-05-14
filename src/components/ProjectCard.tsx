@@ -1,5 +1,4 @@
-import React from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import LiveProjectButton from './LiveProjectButton'
 
 interface ProjectCardProps {
@@ -12,7 +11,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, category, number, index, totalCards, images }: ProjectCardProps) {
-  const containerRef = React.useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   
   // To do a real parallax scale based on the window scroll, we track the container.
   // But a simple static scale based on index + sticky positioning achieves the layered look nicely.

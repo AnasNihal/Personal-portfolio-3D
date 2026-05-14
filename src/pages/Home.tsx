@@ -1,8 +1,7 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import FadeIn from '../components/FadeIn'
 import Magnet from '../components/Magnet'
-import ContactButton from '../components/ContactButton'
 import MarqueeSection from '../components/MarqueeSection'
 
 export default function Home() {

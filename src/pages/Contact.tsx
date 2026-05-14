@@ -1,7 +1,4 @@
-import React from 'react'
-import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
-import ContactButton from '../components/ContactButton'
 
 const PlusIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
