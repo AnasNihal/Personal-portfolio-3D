@@ -1,59 +1,85 @@
 import React from 'react'
 import FadeIn from '../components/FadeIn'
-import AnimatedText from '../components/AnimatedText'
 import ContactButton from '../components/ContactButton'
+import { motion } from 'framer-motion'
 
-const IMG_PLACEHOLDER = "/anas-3d.png"
+const PillShape = () => (
+  <svg viewBox="0 0 100 40" fill="currentColor" className="w-full h-full">
+    <rect width="100" height="40" rx="20" />
+  </svg>
+)
 
 export default function About() {
   return (
-    <div id="about" className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-32 relative z-40 bg-[#0C0C0C] overflow-hidden">
-      
-      {/* Decorative 3D Images */}
-      <FadeIn delay={0.1} x={-80} y={0} className="absolute top-20 left-10 hidden md:block opacity-30">
-        <img src={IMG_PLACEHOLDER} alt="Moon" className="w-32 object-contain" />
-      </FadeIn>
-      <FadeIn delay={0.25} x={-80} y={0} className="absolute bottom-20 left-10 hidden md:block opacity-30">
-        <img src={IMG_PLACEHOLDER} alt="Object" className="w-40 object-contain" />
-      </FadeIn>
-      <FadeIn delay={0.15} x={80} y={0} className="absolute top-20 right-10 hidden md:block opacity-30">
-        <img src={IMG_PLACEHOLDER} alt="Lego" className="w-24 object-contain" />
-      </FadeIn>
-      <FadeIn delay={0.3} x={80} y={0} className="absolute bottom-20 right-10 hidden md:block opacity-30">
-        <img src={IMG_PLACEHOLDER} alt="Group" className="w-36 object-contain" />
-      </FadeIn>
+    <div id="about" className="bg-[#0C0C0C] bg-grid-pattern min-h-screen relative z-20 pt-32 pb-32 px-6 md:px-10 overflow-hidden border-t border-[#D7E2EA]/10">
+      <div className="max-w-7xl mx-auto flex flex-col w-full relative">
+        
+        {/* Massive overlapping header */}
+        <FadeIn y={40} className="mb-16 flex flex-col md:flex-row items-center md:items-end justify-between">
+          <div className="flex flex-col">
+            <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
+              WE ARE
+            </h1>
+            <div className="flex items-center gap-4 mt-2">
+              <div className="w-24 md:w-48 text-[#FF4500]">
+                <PillShape />
+              </div>
+              <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
+                PROS
+              </h1>
+            </div>
+          </div>
+          
+          {/* Circular badge (like the PRO sticker in the reference) */}
+          <motion.div 
+            className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#FFD700] flex items-center justify-center mt-8 md:mt-0 relative shrink-0"
+            whileHover={{ scale: 1.05 }}
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <span className="text-[#0C0C0C] font-black text-2xl md:text-3xl text-center uppercase leading-tight tracking-tighter">
+              Creative<br/>Minds
+            </span>
+            <div className="absolute -top-2 -right-2 text-4xl">✨</div>
+          </motion.div>
+        </FadeIn>
 
-      <FadeIn y={40} className="mb-16">
-        <h1 className="hero-heading font-black uppercase text-[clamp(3rem,12vw,160px)] leading-none text-center">
-          About us
-        </h1>
-      </FadeIn>
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full auto-rows-[auto]">
+          
+          {/* Main text block */}
+          <FadeIn delay={0.1} y={30} className="col-span-1 md:col-span-2 bento-card bg-[#1a1a1a] p-8 md:p-12 flex flex-col justify-center text-[#D7E2EA]">
+            <p className="font-medium text-[clamp(1.2rem,2.5vw,2rem)] leading-snug tracking-tight">
+              We are a full-service creative agency specializing in digital experiences, brand strategy, advertising, and event production. 
+              <br/><br/>
+              With a passion for bold ideas and flawless execution, we help brands stand out and make a lasting impact.
+            </p>
+          </FadeIn>
 
-      <div className="mb-24 w-full flex justify-center">
-        <AnimatedText 
-          text="We are a full-service creative agency specializing in digital experiences, brand strategy, advertising, and event production. With a passion for bold ideas and flawless execution, we help brands stand out and make a lasting impact. Let's create something remarkable together." 
-          className="text-[#D7E2EA] font-medium text-center max-w-[600px] text-[clamp(1rem,2vw,1.35rem)] leading-relaxed"
-        />
+          {/* Stats blocks */}
+          <div className="col-span-1 grid grid-rows-2 gap-4 md:gap-6">
+            <FadeIn delay={0.2} y={30} className="bento-card bg-[#8A2BE2] p-8 flex flex-col items-center justify-center text-white text-center">
+              <h3 className="text-6xl md:text-7xl font-black uppercase tracking-tighter mb-2">10+</h3>
+              <span className="uppercase tracking-widest text-sm font-bold opacity-80">Years Active</span>
+            </FadeIn>
+            
+            <FadeIn delay={0.3} y={30} className="bento-card bg-[#00FA9A] p-8 flex flex-col items-center justify-center text-[#0C0C0C] text-center">
+              <h3 className="text-6xl md:text-7xl font-black uppercase tracking-tighter mb-2">250</h3>
+              <span className="uppercase tracking-widest text-sm font-bold opacity-80">Projects Done</span>
+            </FadeIn>
+          </div>
+
+          {/* Wide Stat / Callout */}
+          <FadeIn delay={0.4} y={30} className="col-span-1 md:col-span-3 bento-card bg-[#1E90FF] p-10 flex flex-col md:flex-row items-center justify-between text-[#0C0C0C]">
+            <div className="flex flex-col mb-8 md:mb-0">
+              <h3 className="text-[clamp(3rem,6vw,5rem)] font-black uppercase tracking-tighter leading-none mb-2">100%</h3>
+              <span className="uppercase tracking-widest font-bold text-xl opacity-80">Client Satisfaction</span>
+            </div>
+            <ContactButton href="/contact" />
+          </FadeIn>
+
+        </div>
       </div>
-
-      <div className="flex flex-col md:flex-row gap-16 md:gap-32 mb-20">
-        <FadeIn delay={0.2} y={30} className="flex flex-col items-center">
-          <span className="hero-heading font-black text-6xl md:text-8xl mb-2">10+</span>
-          <span className="text-[#D7E2EA]/60 uppercase tracking-widest text-sm">Years Active</span>
-        </FadeIn>
-        <FadeIn delay={0.3} y={30} className="flex flex-col items-center">
-          <span className="hero-heading font-black text-6xl md:text-8xl mb-2">250</span>
-          <span className="text-[#D7E2EA]/60 uppercase tracking-widest text-sm">Projects Done</span>
-        </FadeIn>
-        <FadeIn delay={0.4} y={30} className="flex flex-col items-center">
-          <span className="hero-heading font-black text-6xl md:text-8xl mb-2">100%</span>
-          <span className="text-[#D7E2EA]/60 uppercase tracking-widest text-sm">Happy Clients</span>
-        </FadeIn>
-      </div>
-
-      <FadeIn delay={0.5} y={30}>
-        <ContactButton href="/contact" />
-      </FadeIn>
     </div>
   )
 }

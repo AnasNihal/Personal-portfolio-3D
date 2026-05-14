@@ -5,6 +5,77 @@ interface PreloaderProps {
   onComplete: () => void
 }
 
+const Magic3D = () => {
+  return (
+    <div className="w-[280px] sm:w-[400px] md:w-[500px] aspect-square md:aspect-video relative flex items-center justify-center [perspective:1000px]">
+      <motion.div
+        animate={{
+          rotateX: [0, 360],
+          rotateY: [0, 360],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="relative w-48 h-48 sm:w-64 sm:h-64 [transform-style:preserve-3d]"
+      >
+        {/* Core glowing orb */}
+        <div className="absolute inset-[35%] bg-[#D7E2EA] rounded-full blur-[15px] animate-pulse" style={{ transform: "translateZ(0px)" }} />
+        <div className="absolute inset-[42%] bg-white rounded-full blur-[5px]" style={{ transform: "translateZ(0px)" }} />
+
+        {/* 3D Rings */}
+        {[0, 1, 2, 3, 4, 5].map((i) => (
+          <motion.div
+            key={i}
+            className="absolute inset-0 border-[1px] sm:border-[2px] border-[#D7E2EA]/30 rounded-full"
+            style={{
+              boxShadow: "0 0 20px rgba(215, 226, 234, 0.15), inset 0 0 20px rgba(215, 226, 234, 0.15)",
+            }}
+            animate={{
+              rotateX: [0, 360],
+              rotateY: [0, 360],
+              rotateZ: [0, 360],
+            }}
+            transition={{
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: "linear",
+              delay: i * 0.5,
+            }}
+          />
+        ))}
+
+        {/* Orbiting particles */}
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={`particle-${i}`}
+            className="absolute w-1.5 h-1.5 bg-[#D7E2EA] rounded-full blur-[1px]"
+            initial={{
+              x: "50%",
+              y: "50%",
+              z: 0,
+            }}
+            animate={{
+              x: ["50%", `${50 + (Math.random() * 120 - 60)}%`, "50%"],
+              y: ["50%", `${50 + (Math.random() * 120 - 60)}%`, "50%"],
+              z: [0, Math.random() * 300 - 150, 0],
+              opacity: [0, 1, 0],
+              scale: [0, Math.random() + 0.5, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+      </motion.div>
+    </div>
+  )
+}
+
 export default function Preloader({ onComplete }: PreloaderProps) {
   const [progress, setProgress] = useState(0)
 
@@ -77,22 +148,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         [ AGENCY PORTFOLIO ]
       </motion.div>
 
-      {/* Center Video */}
+      {/* Center 3D Magic */}
       <motion.div 
         initial={{ scale: 0.8, opacity: 0, filter: 'blur(10px)' }}
         animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="w-[280px] sm:w-[400px] md:w-[500px] aspect-video relative"
+        className="relative z-10"
       >
-        <div className="absolute inset-0 border border-[#D7E2EA]/20 rounded-xl pointer-events-none z-10" />
-        <video 
-          src="/anas-vid.mp4" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="w-full h-full object-cover rounded-xl bg-[#1a1a1a]"
-        />
+        <Magic3D />
       </motion.div>
     </motion.div>
   )
