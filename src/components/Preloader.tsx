@@ -19,7 +19,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     // Total duration before onComplete is called
     const timer = window.setTimeout(() => {
       onComplete()
-    }, 5000)
+    }, 3500)
 
     // Track when letters settle to start floating
     const assemblyTimer = window.setTimeout(() => {
@@ -68,7 +68,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 duration: 1.4,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="font-bigshoulders font-black text-[clamp(140px,30vw,380px)] text-[#D7E2EA] inline-block tracking-[-0.04em] leading-[0.75] relative"
+              className="font-bigshoulders font-black text-[clamp(80px,25vw,380px)] text-[#D7E2EA] inline-block tracking-[-0.04em] leading-[0.75] relative"
               style={{ textShadow: '0 0 150px rgba(255,89,73,0.15)' }}
             >
               {letter.char}
@@ -81,7 +81,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.0, duration: 1 }}
+        transition={{ delay: 2.2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20"
       >
         <motion.div

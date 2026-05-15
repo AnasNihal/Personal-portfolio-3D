@@ -9,23 +9,23 @@ export default function Footer() {
       <div className="w-full flex flex-col">
         
         {/* Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full border-b border-black">
+        <div className="grid grid-cols-2 md:grid-cols-3 w-full border-b border-black">
           
           {/* Block 1 */}
-          <div className="flex flex-col border-b md:border-b-0 md:border-r border-black p-6 md:p-8 min-h-[350px] justify-between group">
+          <div className="flex flex-col border-r border-black p-6 md:p-8 min-h-[350px] justify-between group">
             <div className="flex justify-between items-start">
               <span className="font-bold text-sm tracking-tight uppercase">BLCK. 01</span>
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
             <div className="flex flex-col gap-1 mt-20">
-              {['Projects', 'Contact'].map(link => (
+              {['Projects', 'Contact', 'FAQs'].map(link => (
                 <a key={link} href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">{link}</a>
               ))}
             </div>
           </div>
 
-          {/* Block 2 */}
-          <div className="flex flex-col border-b md:border-b-0 md:border-r border-black p-6 md:p-8 min-h-[350px] justify-between group">
+          {/* Block 2 (Hidden on Mobile) */}
+          <div className="hidden md:flex flex-col border-r border-black p-6 md:p-8 min-h-[350px] justify-between group">
             <div className="flex justify-between items-start">
               <span className="font-bold text-sm tracking-tight uppercase">BLCK. 02</span>
               <div className="w-[6px] h-[6px] bg-black"></div>
@@ -37,10 +37,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Block 3 */}
+          {/* Block 3 (Block 2 on Mobile) */}
           <div className="flex flex-col p-6 md:p-8 min-h-[350px] justify-between group">
             <div className="flex justify-between items-start">
-              <span className="font-bold text-sm tracking-tight uppercase">BLCK. 03</span>
+              <span className="font-bold text-sm tracking-tight uppercase">
+                BLCK. <span className="md:hidden">02</span><span className="hidden md:inline">03</span>
+              </span>
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
             <div className="flex flex-col gap-1 mt-20">
