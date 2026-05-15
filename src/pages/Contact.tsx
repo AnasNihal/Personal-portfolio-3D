@@ -8,12 +8,12 @@ const PlusIcon = () => (
 
 export default function Contact() {
   return (
-    <div id="contact" className="bg-[#0C0C0C] bg-grid-pattern min-h-screen w-full flex flex-col pt-32 relative z-50 overflow-hidden border-t border-[#D7E2EA]/10">
+    <div id="contact" className="bg-[#0C0C0C] bg-grid-pattern w-full flex flex-col pt-24 pb-12 relative z-50 overflow-hidden border-t border-[#D7E2EA]/10">
 
-      <div className="flex-1 flex flex-col w-full max-w-7xl mx-auto px-6 md:px-10 pb-20 relative z-10">
+      <div className="flex flex-col w-full max-w-7xl mx-auto px-6 md:px-10 relative z-10">
 
         {/* Massive header */}
-        <FadeIn y={40} className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end w-full">
+        <FadeIn y={40} className="flex flex-col md:flex-row justify-between items-start md:items-end w-full">
           <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
             SAY<br />HELLO
           </h1>

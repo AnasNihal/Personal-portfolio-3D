@@ -1,7 +1,4 @@
 import FadeIn from '../components/FadeIn'
-import ContactButton from '../components/ContactButton'
-import { motion } from 'framer-motion'
-
 const PillShape = () => (
   <svg viewBox="0 0 100 40" fill="currentColor" className="w-full h-full">
     <rect width="100" height="40" rx="20" />
@@ -29,18 +26,7 @@ export default function About() {
             </div>
           </div>
           
-          {/* Circular badge (like the PRO sticker in the reference) */}
-          <motion.div 
-            className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#FFD700] flex items-center justify-center mt-8 md:mt-0 relative shrink-0"
-            whileHover={{ scale: 1.05 }}
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <span className="text-[#0C0C0C] font-black text-2xl md:text-3xl text-center uppercase leading-tight tracking-tighter">
-              3D<br/>Artist
-            </span>
-            <div className="absolute -top-2 -right-2 text-4xl">✨</div>
-          </motion.div>
+
         </FadeIn>
 
         {/* Bento Grid */}
@@ -68,14 +54,7 @@ export default function About() {
             </FadeIn>
           </div>
 
-          {/* Wide Stat / Callout */}
-          <FadeIn delay={0.4} y={30} className="col-span-1 md:col-span-3 bento-card bg-[#1E90FF] p-10 flex flex-col md:flex-row items-center justify-between text-[#0C0C0C]">
-            <div className="flex flex-col mb-8 md:mb-0">
-              <h3 className="text-[clamp(3rem,6vw,5rem)] font-black uppercase tracking-tighter leading-none mb-2">40+</h3>
-              <span className="uppercase tracking-widest font-bold text-xl opacity-80">Successful Projects</span>
-            </div>
-            <ContactButton href="/contact" />
-          </FadeIn>
+
 
         </div>
       </div>

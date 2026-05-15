@@ -17,17 +17,10 @@ export default function Footer() {
               <span className="font-bold text-sm tracking-tight uppercase">BLCK. 01</span>
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
-            <div className="grid grid-cols-2 gap-4 mt-20">
-              <div className="flex flex-col gap-1">
-                {['Approach', 'Company', 'Projects', 'Contact'].map(link => (
-                  <a key={link} href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">{link}</a>
-                ))}
-              </div>
-              <div className="flex flex-col gap-1">
-                {['3D Panel', 'Animation', 'Interactive', 'System®'].map(link => (
-                  <a key={link} href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">{link}</a>
-                ))}
-              </div>
+            <div className="flex flex-col gap-1 mt-20">
+              {['Projects', 'Contact'].map(link => (
+                <a key={link} href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">{link}</a>
+              ))}
             </div>
           </div>
 
@@ -38,7 +31,7 @@ export default function Footer() {
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
             <div className="flex flex-col gap-1 mt-20">
-              {['Digitalization', 'Sustainability', 'Certification', 'FAQs'].map(link => (
+              {['FAQs'].map(link => (
                 <a key={link} href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">{link}</a>
               ))}
             </div>
@@ -51,7 +44,9 @@ export default function Footer() {
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
             <div className="flex flex-col gap-1 mt-20">
-              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4 mb-4">LinkedIn</a>
+              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">LinkedIn</a>
+              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">Instagram</a>
+              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4 mb-4">X</a>
               <div className="text-[15px] font-medium mt-auto pt-4">
                 <span className="opacity-70">ES</span> <span className="mx-1">|</span> <strong>EN</strong>
               </div>

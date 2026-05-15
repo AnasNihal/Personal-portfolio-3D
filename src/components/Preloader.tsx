@@ -41,13 +41,16 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center"
+          className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center overflow-hidden rounded-full border border-[#D7E2EA]/10 shadow-[0_0_30px_rgba(215,226,234,0.05)]"
         >
-          {/* 3D Character Walking Image */}
-          <img
-            src="/walking.gif"
-            alt="3D Character Walking"
-            className="w-full h-full object-contain"
+          {/* Intro Video */}
+          <video
+            src="/video.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
