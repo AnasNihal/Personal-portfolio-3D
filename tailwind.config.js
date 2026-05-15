@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bebas: ['"Bebas Neue"', 'sans-serif'],
+        cormorant: ['"Cormorant Garamond"', 'serif'],
+        bigshoulders: ['"Big Shoulders Display"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
