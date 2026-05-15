@@ -41,7 +41,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center overflow-hidden rounded-full border border-[#D7E2EA]/10 shadow-[0_0_30px_rgba(215,226,234,0.05)]"
+          className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center overflow-hidden rounded-full border border-[#FF5949]/20 shadow-[0_0_30px_rgba(255,89,73,0.15)]"
         >
           {/* Intro Video */}
           <video
@@ -61,12 +61,12 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-[#D7E2EA] font-sans font-medium tracking-[0.2em] uppercase text-lg md:text-xl">
+          <span className="text-[#FF5949] font-sans font-medium tracking-[0.2em] uppercase text-lg md:text-xl">
             LOADING
           </span>
-          <div className="w-32 h-[2px] bg-[#D7E2EA]/20 rounded-full overflow-hidden">
+          <div className="w-32 h-[2px] bg-[#FF5949]/20 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-[#D7E2EA]"
+              className="h-full bg-[#FF5949]"
               style={{ width: `${progress}%` }}
             />
           </div>

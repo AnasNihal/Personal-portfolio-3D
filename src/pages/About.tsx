@@ -17,7 +17,7 @@ export default function About() {
               I AM
             </h1>
             <div className="flex items-center gap-4 mt-2">
-              <div className="w-24 md:w-48 text-[#FF4500]">
+              <div className="w-24 md:w-48 text-[#FF5949]">
                 <PillShape />
               </div>
               <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
@@ -43,12 +43,12 @@ export default function About() {
 
           {/* Stats blocks */}
           <div className="col-span-1 grid grid-rows-2 gap-4 md:gap-6">
-            <FadeIn delay={0.2} y={30} className="bento-card bg-[#8A2BE2] p-8 flex flex-col items-center justify-center text-white text-center">
+            <FadeIn delay={0.2} y={30} className="bento-card bg-[#FF5949] p-8 flex flex-col items-center justify-center text-black text-center">
               <h3 className="text-6xl md:text-7xl font-black uppercase tracking-tighter mb-2">5+</h3>
               <span className="uppercase tracking-widest text-sm font-bold opacity-80">Years Coding</span>
             </FadeIn>
             
-            <FadeIn delay={0.3} y={30} className="bento-card bg-[#00FA9A] p-8 flex flex-col items-center justify-center text-[#0C0C0C] text-center">
+            <FadeIn delay={0.3} y={30} className="bento-card bg-[#00C2CB] p-8 flex flex-col items-center justify-center text-black text-center">
               <h3 className="text-6xl md:text-7xl font-black uppercase tracking-tighter mb-2">∞</h3>
               <span className="uppercase tracking-widest text-sm font-bold opacity-80">Coffee Drunk</span>
             </FadeIn>

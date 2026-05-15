@@ -27,13 +27,13 @@ export default function Home() {
           <FadeIn delay={0.15} y={40} className="w-full text-center flex flex-col items-center overflow-visible">
             <motion.h1 
               style={{ x: helloX }}
-              className="font-black uppercase tracking-tight whitespace-nowrap text-[24vw] sm:text-[22vw] md:text-[24vw] lg:text-[26vw] leading-[0.75] text-transparent bg-clip-text bg-gradient-to-b from-[#D22B2B] to-[#6A1212]"
+              className="font-black uppercase tracking-tight whitespace-nowrap text-[24vw] sm:text-[22vw] md:text-[24vw] lg:text-[26vw] leading-[0.75] text-transparent bg-clip-text bg-gradient-to-b from-[#FF5949] to-[#A02D20]"
             >
               HELLO
             </motion.h1>
             <motion.h1 
               style={{ x: thereX }}
-              className="font-black uppercase tracking-tight whitespace-nowrap text-[24vw] sm:text-[22vw] md:text-[24vw] lg:text-[26vw] leading-[0.75] text-transparent bg-clip-text bg-gradient-to-b from-[#D22B2B] to-[#6A1212]"
+              className="font-black uppercase tracking-tight whitespace-nowrap text-[24vw] sm:text-[22vw] md:text-[24vw] lg:text-[26vw] leading-[0.75] text-transparent bg-clip-text bg-gradient-to-b from-[#FF5949] to-[#A02D20]"
             >
               THERE
             </motion.h1>

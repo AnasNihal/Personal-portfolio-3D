@@ -44,8 +44,8 @@ export default function Footer() {
               <div className="w-[6px] h-[6px] bg-black"></div>
             </div>
             <div className="flex flex-col gap-1 mt-20">
-              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">LinkedIn</a>
-              <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">Instagram</a>
+              <a href="https://www.linkedin.com/in/ahammed-anas-nihal-8772b1220/" target="_blank" rel="noopener noreferrer" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">LinkedIn</a>
+              <a href="https://www.instagram.com/codelikeanss._/" target="_blank" rel="noopener noreferrer" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4">Instagram</a>
               <a href="#" className="text-[15px] font-medium hover:underline decoration-2 underline-offset-4 mb-4">X</a>
               <div className="text-[15px] font-medium mt-auto pt-4">
                 <span className="opacity-70">ES</span> <span className="mx-1">|</span> <strong>EN</strong>
@@ -57,8 +57,8 @@ export default function Footer() {
 
         {/* Massive Text Section */}
         <div className="w-full flex items-center justify-center py-10 md:py-16 border-b border-black overflow-hidden relative px-4">
-          <h1 className="text-[clamp(5rem,20vw,400px)] font-black tracking-tighter leading-[0.8] text-black select-none flex items-baseline">
-            ANAS.
+          <h1 className="text-[clamp(5rem,20vw,400px)] font-black tracking-tighter leading-[0.8] text-black select-none flex items-baseline relative">
+            ANA<span className="relative">S<span className="absolute w-[clamp(0.5rem,2vw,40px)] h-[clamp(0.5rem,2vw,40px)] rounded-full bg-[#00C2CB] -top-[clamp(1rem,4vw,80px)] left-1/2 -translate-x-1/2"></span></span>.
             <span className="text-[clamp(1rem,4vw,60px)] font-bold ml-2 -translate-y-[60%]">®</span>
           </h1>
         </div>

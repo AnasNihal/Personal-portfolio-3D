@@ -17,7 +17,7 @@ export default function Contact() {
           <h1 className="font-black uppercase text-[clamp(4rem,15vw,200px)] leading-[0.8] text-[#D7E2EA] tracking-tighter">
             SAY<br />HELLO
           </h1>
-          <div className="w-16 h-16 md:w-24 md:h-24 text-[#8A2BE2] mb-4 md:mb-8 animate-pulse">
+          <div className="w-16 h-16 md:w-24 md:h-24 text-[#00C2CB] mb-4 md:mb-8 animate-pulse">
             <PlusIcon />
           </div>
         </FadeIn>

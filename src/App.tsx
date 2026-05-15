@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
-import Blog from './pages/Blog'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import Preloader from './components/Preloader'
@@ -46,7 +45,6 @@ function App() {
         >
           <Home />
           <Work />
-          <Blog />
           <About />
           <Contact />
           <Footer />
